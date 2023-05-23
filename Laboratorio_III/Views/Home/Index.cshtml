@@ -1,0 +1,47 @@
+﻿@model Laboratorio_III.Models.ModelCount;
+
+<div class="container" style="display:flex; flex-direction:column; text-align:center; padding:50px 0px; justify-content:center; align-items:center">
+    <h1> Compuestos Organicos</h1>
+    <span style="padding-top:10px">A continuacion se le presentara una imagen de un compuesto organico</span><br />
+    <span>Debe incluir el nombre del mismo en el espacio solicitado</span>
+    <div style="text-align:center">
+        <img style="object-fit:contain" width="300" height="300" src=@Model.Path class="rounded mx-auto d-block" alt="Acido alginico">
+    </div>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div style="width:370px; margin-bottom:30px" >
+
+        <div class="row mb-3">
+            <label for="Name" class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Name" name="Name">
+            </div>   
+                <input name="Component" type="hidden" value=@Model.Component>
+                <input name="Path" type="hidden" value=@Model.Path>
+                <input name="Correct" type="hidden" value=@Model.Correct>
+                <input name="Incorrect" type="hidden" value=@Model.Incorrect>
+        </div>
+        <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Check" name="Check">
+                <label class="form-check-label" for="Check">
+              <b>Desea seguir con la siguiente pregunta?</b>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100px; margin-top:30px">Validar</button>
+    </div>
+}
+
+    @{
+        if (!String.IsNullOrEmpty(@Model.Message))
+        {
+            <p>@Model.Message</p>
+        }
+    }
+
+    <span>Correctas: @Model.Correct</span><br />
+    <span>Incorrectas: @Model.Incorrect</span>
+</div>
+
+
+           
