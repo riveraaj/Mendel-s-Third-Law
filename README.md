@@ -2,7 +2,7 @@
 
 
 
-![Project Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbyjus.com%2Fbiology%2Fmendel-laws-of-inheritance%2F&psig=AOvVaw1rtEaUITXZZIdH-swZ4JXr&ust=1685125542315000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJiqyPyLkf8CFQAAAAAdAAAAABAE)
+![Project Image](https://www.palomar.edu/anthro/mendel/images/first_cross_pollination.gif)
 
 > A web application was developed to validate the name of an organic compound against its graphical representation.
 
